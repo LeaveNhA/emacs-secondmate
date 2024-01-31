@@ -1,3 +1,10 @@
+;;; secondmate.el --- secondmate client for emacs -*- lexical-binding: t; -*-
+
+;; MIT License
+
+;;; Code:
+
+
 (require 'json)
 (require 'url)
 (require 'url-parse)
