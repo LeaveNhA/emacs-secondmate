@@ -4,8 +4,8 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
-device = "cuda"  # "cpu" or "cuda" or "cuda:n" where n is specific GPU to use
-modelname = "replit/replit-code-v1-3b" #"EleutherAI/gpt-neo-2.7B"
+device = "mps"  # "cpu", "mps", "cuda" or "cuda:n" where n is specific GPU to use
+modelname = "codellama/CodeLlama-13b-Instruct-hf" #"EleutherAI/gpt-neo-2.7B"
 tokenizer = AutoTokenizer.from_pretrained(modelname, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(modelname, trust_remote_code=True)
 model.to(device)
